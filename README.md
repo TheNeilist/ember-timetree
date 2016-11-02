@@ -1,3 +1,37 @@
+# Ember-timetree
+
+This README outlines the details of collaborating on this Ember addon.
+
+## Installation
+
+* `git clone <repository-url>` this repository
+* `cd ember-timetree`
+* `npm install`
+* `bower install`
+
+## Running
+
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+
+## Running Tests
+
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `ember test`
+* `ember test --server`
+
+## Building
+
+* `ember build`
+
+For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+
+
+
+--------------------------------------
+-- ORIGINAL README FROM CROWDSTRIKE --
+--------------------------------------
+
 # ember-timetree - DEPRECATED
 
 ##As this component is no longer in development inside Crowdstrike we are providing this code for illustrative purposes only. Please feel free to use and fork but be aware we will no longer be updating this repository to support newer versions of Ember or fixing issues.
