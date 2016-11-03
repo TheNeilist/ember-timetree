@@ -1,6 +1,7 @@
 {
   "name": "ember-timetree",
   "dependencies": {
+    "d3": "~3.5.5",
     "ember": "~2.8.0",
     "ember-cli-shims": "0.1.1",
     "jquery": "^1.11.1",

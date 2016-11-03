@@ -87,7 +87,7 @@
 }
 
 .time-tree .duration text, .time-tree-brush .duration text {
-  display: none;
+  display: block;
   fill: #fff;
 }
 

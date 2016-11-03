@@ -276,6 +276,7 @@ const TimeTreeComponent = Ember.Component.extend({
     let showLinks = this.get('showLinks');
     let durationFormatter = this.get('durationFormatter');
     let applyLabel;
+    let applySectionLabel;
     let range = this.get('_range');
 
     let xScale = this.get('xScale');
@@ -402,6 +403,14 @@ const TimeTreeComponent = Ember.Component.extend({
         .text(durationFormatter);
     };
 
+    applySectionLabel = function(selection, label) {
+      return selection
+        .attr('y', () => yScale.rangeBand() / 2)
+        .attr('dx', 3) // padding-left
+        .attr('dy', '.35em') // vertical-align: middle
+        .text(label);
+    };
+
     bars.exit().remove();
 
     bars
@@ -425,9 +434,12 @@ const TimeTreeComponent = Ember.Component.extend({
             .attr('height', yScale.rangeBand());
 
           if (showLabels) {
-            sectionData.select('text')
-              .attr('x', s => xScale(s.start) - xScale(n.start))
-              .call(applyLabel);
+//            sectionData.select('text')
+//              .attr('x', s => xScale(s.start) - xScale(n.start))
+//              .call(applyLabel)
+            let sectionElement = sectionData.select('text')
+              .attr('x', s => xScale(s.start) - xScale(n.start));
+            applySectionLabel(sectionElement, s => s.name);
           }
         }
       });
